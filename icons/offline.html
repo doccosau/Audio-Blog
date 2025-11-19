@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline - Tịch Phong Thiên Sơn</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Noto Serif', 'Crimson Text', serif;
+      background: linear-gradient(135deg, #faf8f3 0%, #f5f1e8 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      color: #2c2c2c;
+    }
+    
+    .offline-container {
+      max-width: 600px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 3rem 2rem;
+      border-radius: 24px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(107, 144, 128, 0.2);
+    }
+    
+    .mountain-icon {
+      font-size: 5rem;
+      margin-bottom: 1.5rem;
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      color: #6b9080;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+      color: #5a5a5a;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    
+    .message {
+      font-size: 1rem;
+      color: #8a8a8a;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+    
+    .quote {
+      font-family: 'Charm', cursive;
+      font-size: 1.4rem;
+      color: #6b9080;
+      font-style: italic;
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: rgba(107, 144, 128, 0.05);
+      border-left: 3px solid #6b9080;
+      border-radius: 8px;
+    }
+    
+    .actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.75rem;
+      background: #6b9080;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn:hover {
+      background: #5a7b6a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(107, 144, 128, 0.3);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: #6b9080;
+      border: 2px solid #6b9080;
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(107, 144, 128, 0.1);
+    }
+    
+    .status {
+      margin-top: 2rem;
+      padding: 1rem;
+      background: rgba(197, 83, 74, 0.1);
+      border-radius: 12px;
+      font-size: 0.9rem;
+      color: #c5534a;
+    }
+    
+    .status.online {
+      background: rgba(107, 144, 128, 0.1);
+      color: #6b9080;
+    }
+  </style>
+</head>
+<body>
+  <div class="offline-container">
+    <div class="mountain-icon">🏔️</div>
+    
+    <h1>Lạc giữa núi sâu</h1>
+    
+    <p class="subtitle">
+      Có vẻ như bạn đang ở nơi không có kết nối mạng
+    </p>
+    
+    <p class="message">
+      Đừng lo lắng, những trang bạn đã ghé thăm trước đó vẫn được lưu giữ trong ký ức. 
+      Hãy quay lại khi đã tìm được đường về thế giới kết nối, hoặc thử làm mới trang này.
+    </p>
+    
+    <div class="quote">
+      "Tĩnh lặng cũng là một cách kết nối..."
+    </div>
+    
+    <div class="actions">
+      <button class="btn" onclick="window.location.reload()">
+        🔄 Thử lại
+      </button>
+      <a class="btn btn-secondary" href="/">
+        🏠 Về trang chủ
+      </a>
+    </div>
+    
+    <div class="status" id="status">
+      ⚠️ Không có kết nối mạng
+    </div>
+  </div>
+  
+  <script>
+    // Kiểm tra trạng thái kết nối
+    function updateStatus() {
+      const statusEl = document.getElementById('status');
+      if (navigator.onLine) {
+        statusEl.className = 'status online';
+        statusEl.innerHTML = '✅ Đã có kết nối! Bạn có thể thử tải lại trang.';
+      } else {
+        statusEl.className = 'status';
+        statusEl.innerHTML = '⚠️ Không có kết nối mạng';
+      }
+    }
+    
+    // Lắng nghe sự kiện online/offline
+    window.addEventListener('online', updateStatus);
+    window.addEventListener('offline', updateStatus);
+    
+    // Kiểm tra ngay khi trang load
+    updateStatus();
+    
+    // Tự động reload khi có kết nối trở lại
+    window.addEventListener('online', () => {
+      setTimeout(() => {
+        if (confirm('Đã có kết nối! Bạn có muốn tải lại trang không?')) {
+          window.location.reload();
+        }
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

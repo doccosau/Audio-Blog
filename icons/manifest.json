@@ -1,0 +1,28 @@
+{
+  "name": "Tịch Phong Thiên Sơn - 夕風天山",
+  "short_name": "Tịch Phong",
+  "description": "Nơi lưu giữ hơi thở núi rừng và khoảng lặng của tâm hồn",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#faf8f3",
+  "theme_color": "#6b9080",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQ94sJxi1p2WHT3lr3jVfdw0N2cbfGTyXdvTGmFDwNjiINDgRfvAsGvD8CCQy8lGLca8jAS8wj4rRbNxgFcbGd8Q8EusiszB9pprsvo5zrFtMaq9QRe5kGvJrUb4K0AImxGxVHN730XLXzUK_Ml35jfObiJx9A5gn3SehjlglCp416DPA/s192/logo%20xanhgghhh.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQ94sJxi1p2WHT3lr3jVfdw0N2cbfGTyXdvTGmFDwNjiINDgRfvAsGvD8CCQy8lGLca8jAS8wj4rRbNxgFcbGd8Q8EusiszB9pprsvo5zrFtMaq9QRe5kGvJrUb4K0AImxGxVHN730XLXzUK_Ml35jfObiJx9A5gn3SehjlglCp416DPA/s512/logo%20xanhgghhh.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["lifestyle", "education", "entertainment"],
+  "lang": "vi",
+  "dir": "ltr"
+}
