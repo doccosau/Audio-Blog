@@ -10,6 +10,12 @@
   "orientation": "portrait-primary",
   "icons": [
     {
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQ94sJxi1p2WHT3lr3jVfdw0N2cbfGTyXdvTGmFDwNjiINDgRfvAsGvD8CCQy8lGLca8jAS8wj4rRbNxgFcbGd8Q8EusiszB9pprsvo5zrFtMaq9QRe5kGvJrUb4K0AImxGxVHN730XLXzUK_Ml35jfObiJx9A5gn3SehjlglCp416DPA/s144/logo%20xanhgghhh.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
       "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQ94sJxi1p2WHT3lr3jVfdw0N2cbfGTyXdvTGmFDwNjiINDgRfvAsGvD8CCQy8lGLca8jAS8wj4rRbNxgFcbGd8Q8EusiszB9pprsvo5zrFtMaq9QRe5kGvJrUb4K0AImxGxVHN730XLXzUK_Ml35jfObiJx9A5gn3SehjlglCp416DPA/s192/logo%20xanhgghhh.png",
       "sizes": "192x192",
       "type": "image/png",
@@ -20,6 +26,15 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgThETex9OvFhxXtEYrCdCZXyNcxgALFCsGzLhxHCR-hR-HKeGacRciRPv6HBBpMftL4kMj2kYrm6sK8IXMcR44_SVZBE4jyVR_Ltt-RVBdMW8MFc-8f6kQqehAtnqXNPrU9sWxR66pvpikm0IIqpVPQQrcR7obLehUS0edyTNcFuNQlBc/s1600/15264385288516162_186342302_H1200.jpg",
+      "sizes": "1200x600",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Trang chủ Tịch Phong Thiên Sơn"
     }
   ],
   "categories": [
